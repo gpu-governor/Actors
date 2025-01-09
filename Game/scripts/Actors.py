@@ -139,35 +139,35 @@ class SpriteSheetActor(Actor):
 
 
 
-
-pygame.init()
-
-# Screen setup
-screen = pygame.display.set_mode((800, 600))
-clock = pygame.time.Clock()
-
-# Actors
-static_sprite = Actor("img/player/Idle/0.png", 100, 100, 2.0)
-animated_sprite = AnimatedActor(
-    ["img/player/Idle/0.png", "img/player/Idle/1.png", "img/player/Idle/2.png", "img/player/Idle/3.png"],
-    300, 300, 2.0, 0.2
-)
-sprite_sheet_actor = SpriteSheetActor("img/Attack1.png", 500, 100, 2.0, 126, 126, 7, 0.1)
-
-# Game loop
-running = True
-while running:
-    delta_time = clock.tick(60) / 1000.0  # Time in seconds
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    # Rendering
-    screen.fill((255, 255, 255))
-    static_sprite.render(screen)
-    animated_sprite.render(screen, delta_time)
-    sprite_sheet_actor.render(screen, delta_time)
-    pygame.display.flip()
-
-pygame.quit()
+# #   EXAMPLE USAGE
+# pygame.init()
+# 
+# # Screen setup
+# screen = pygame.display.set_mode((800, 600))
+# clock = pygame.time.Clock()
+# 
+# # Actors
+# static_sprite = Actor("img/player/Idle/0.png", 100, 100, 2.0)
+# animated_sprite = AnimatedActor(
+#     ["img/player/Idle/0.png", "img/player/Idle/1.png", "img/player/Idle/2.png", "img/player/Idle/3.png"],
+#     300, 300, 2.0, 0.2
+# )
+# sprite_sheet_actor = SpriteSheetActor("img/Attack1.png", 500, 100, 2.0, 126, 126, 7, 0.1)
+# 
+# # Game loop
+# running = True
+# while running:
+#     delta_time = clock.tick(60) / 1000.0  # Time in seconds
+# 
+#     for event in pygame.event.get():
+#         if event.type == pygame.QUIT:
+#             running = False
+# 
+#     # Rendering
+#     screen.fill((255, 255, 255))
+#     static_sprite.render(screen)
+#     animated_sprite.render(screen, delta_time)
+#     sprite_sheet_actor.render(screen, delta_time)
+#     pygame.display.flip()
+# 
+# pygame.quit()
