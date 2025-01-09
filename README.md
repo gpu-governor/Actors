@@ -1,2 +1,2 @@
 # Actors
-Video Game programming in C++, structuring Game objects as actors
+Video Game programming in pygame, structuring Game objects as actors
